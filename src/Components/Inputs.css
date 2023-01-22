@@ -1,0 +1,15 @@
+.field{
+    padding:5px;
+    width: 220px;
+}
+
+.username{
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+}
+.password{
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+}
