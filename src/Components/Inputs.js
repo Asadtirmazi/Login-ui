@@ -1,19 +1,49 @@
 import "./Inputs.css";
+import react, {useState} from "react";
 
-function Inputs() {
+
+
+function Inputs(props) {
+
+  
+
+  
+ const [value, setValue] = useState(props.password)
+
+  const passwordHandler = (event) => {
+    setValue(event.target.value)  
+    
+  }
+  const enteredData = {
+    password : value
+  };
+  console.log(enteredData[0])
+  props.onSaveData(enteredData)
+  
+
+  
+
   return (
-    <div className="field">
-      <form>
+    <form onSubmit={props.wh} className="field">
+      <div className="input-field">
         <div className="username">
-          <label>Username  </label>
+          <label >Username </label>
           <input className="field" type="text" name="username" />
         </div>
         <div className="password">
-          <label>Password    </label>
-          <input className="field" type="text"  name="password" />
+          <label>Password </label>
+          <input
+            onChange={passwordHandler}
+            className="field"
+            type="text"
+            name="password"
+          />
         </div>
-      </form>
-    </div>
+        <button  className="btn">
+          Login
+        </button>
+      </div>
+    </form>
   );
 }
 
